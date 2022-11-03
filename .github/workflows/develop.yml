@@ -1,4 +1,4 @@
-name: Test Code
+name: Upload develop changes and pull request to main.
 on:
   pull_request:
   push:
@@ -18,7 +18,11 @@ jobs:
         run: npm run lint
       - name: Test coverage
         run: npm run test
-      - name: Create Pull Request
+      - name: Create Pull Request to main
         uses: peter-evans/create-pull-request@v4
         with:
           branch: main
+      - name: Create Pull Request to master
+        uses: peter-evans/create-pull-request@v4
+        with:
+          branch: master
