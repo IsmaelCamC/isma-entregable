@@ -2,7 +2,7 @@
   "name": "isma-entregable",
   "version": "0.1.0",
   "private": true,
-  "homepage": "yes",
+  "homepage": "https://ismaelcamacho-hexaware.github.io/isma-entregable/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
