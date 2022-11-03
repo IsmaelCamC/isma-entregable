@@ -18,5 +18,5 @@ jobs:
         uses: IsmaelCamacho-Hexaware/isma-entregable@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BASE_BRANCH: develop/main-develop
-          HEAD_BRANCH: main
+          BASE_BRANCH: main
+          HEAD_BRANCH: develop/main-develop
