@@ -18,3 +18,7 @@ jobs:
         run: npm run lint
       - name: Test coverage
         run: npm run test
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          branch: main
