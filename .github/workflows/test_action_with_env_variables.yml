@@ -1,0 +1,22 @@
+name: Testing action to create PR
+
+on:
+  push:
+    branches:
+      - develop/main-develop
+
+jobs:
+  create-pr-against-master-job:
+    runs-on: ubuntu-latest
+    name: create PR
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: '0'
+      - run: exit 0
+      - name: Create PR
+        uses: IsmaelCamacho-Hexaware/isma-entregable@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_BRANCH: develop/main-develop
+          HEAD_BRANCH: main
