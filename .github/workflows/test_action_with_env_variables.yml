@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     name: create PR
     steps:
-      - uses: actions/checkout@develop/main-develop
+      - uses: actions/checkout@v2
         with:
           fetch-depth: '0'
       - run: exit 0
