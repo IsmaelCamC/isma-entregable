@@ -19,10 +19,8 @@ jobs:
       - name: Test coverage
         run: npm run test
       - name: Create PR
-        uses: medlypharmacy/create-pr-action@main
+        run: gh pr create --title "Synchronizing branches." --body "Synchronization" --base main --head develop/main-develop
         env:
-          GITHUB_TOKEN: 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
-          HEAD_BRANCH: develop/main-develop
-          BASE_BRANCH: main         
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
       - name: Curl request
         run: curl -X POST -d {} https://api.netlify.com/build_hooks/6365398559976d009f2aed7d
