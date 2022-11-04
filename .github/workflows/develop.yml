@@ -13,7 +13,6 @@ jobs:
   push:
     branches:
       - develop/*
-jobs:
   test-code:
     runs-on: ubuntu-latest
     steps:
