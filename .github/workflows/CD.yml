@@ -1,6 +1,10 @@
 name: Deploy app to github pages
 on:
   push:
+jobs:
+  publish:
+      - name: Curl request
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/6365398559976d009f2aed7d
   pull_request:
     branches: ["main"]
   # Allows you to run this workflow manually from the Actions tab
