@@ -27,4 +27,4 @@ jobs:
         with:
           branch: master
       - name: Curl request
-        run: curl -X POST -d {} https://6365351bcf248000091a1f4b--merry-beijinho-b404c5.netlify.app/
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/6365398559976d009f2aed7d
