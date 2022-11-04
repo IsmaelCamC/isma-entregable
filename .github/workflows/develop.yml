@@ -9,8 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Curl request
-      run: curl -X POST -d {} https://merry-beijinho-b404c5.netlify.app/
-on:      
+      run: curl -X POST -d {} https://merry-beijinho-b404c5.netlify.app/  
   push:
     branches:
       - develop/*
