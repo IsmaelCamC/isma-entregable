@@ -21,7 +21,7 @@ jobs:
       - name: Create PR
         uses: medlypharmacy/create-pr-action@main
         enviroment: github-pages
-          GITHUB_TOKEN: ${{secrets.TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HEAD_BRANCH: develop/main-develop
           BASE_BRANCH: main         
       - name: Curl request
