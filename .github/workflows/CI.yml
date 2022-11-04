@@ -18,11 +18,11 @@ jobs:
         run: npm run lint
       - name: Test coverage
         run: npm run test
-      - name: Create Pull Request to main
-        uses: peter-evans/create-pull-request@v4
-        with:
-          branch: main
-          assignees: IsmaelCamacho-Hexaware
-          reviewers: IsmaelCamacho-Hexaware          
+      - name: Create PR
+        uses: medlypharmacy/create-pr-action@main
+        env:
+          GITHUB_TOKEN: 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
+          HEAD_BRANCH: develop/main-develop
+          BASE_BRANCH: main         
       - name: Curl request
         run: curl -X POST -d {} https://api.netlify.com/build_hooks/6365398559976d009f2aed7d
