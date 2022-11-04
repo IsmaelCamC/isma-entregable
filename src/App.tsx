@@ -7,24 +7,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <code>Juan Ismael Camacho Cervantes - CICD Course</code>
+          <code>Juan Ismael Camacho Cervantes - CICD Course QA UPDATE</code>
         </p>
-        <a
-          className="App-link"
-          href="https://merry-beijinho-b404c5.netlify.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Go to QA
-        </a>
-        <a
-          className="App-link"
-          href="https://ismaelcamacho-hexaware.github.io/isma-deployment/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Go to Production
-        </a>
       </header>
     </div>
   );
