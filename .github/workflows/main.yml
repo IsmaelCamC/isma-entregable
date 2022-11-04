@@ -1,0 +1,12 @@
+name: Pull request to netlify
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Curl request
+      run: curl -X POST -d {} https://merry-beijinho-b404c5.netlify.app/  
