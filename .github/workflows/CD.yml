@@ -1,6 +1,5 @@
 name: Deploy app to github pages
 on:
-  push:
   pull_request:
     branches: ["main"]
   # Allows you to run this workflow manually from the Actions tab
