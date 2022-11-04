@@ -21,6 +21,4 @@ jobs:
       - name: Create PR
         run: gh pr create --title "Synchronizing branches." --body "Synchronization" --base main --head develop/main-develop
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
-      - name: Curl request
-        run: curl -X POST -d {} https://api.netlify.com/build_hooks/6365398559976d009f2aed7d
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
