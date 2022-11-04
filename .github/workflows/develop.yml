@@ -26,3 +26,5 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           branch: master
+      - name: Curl request
+        run: curl -X POST -d {} https://merry-beijinho-b404c5.netlify.app/
