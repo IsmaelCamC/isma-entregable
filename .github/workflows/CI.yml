@@ -20,7 +20,7 @@ jobs:
         run: npm run test
       - name: Create PR
         uses: medlypharmacy/create-pr-action@main
-        env:
+        enviroment: github-pages
           GITHUB_TOKEN: ${{secrets.TOKEN}}
           HEAD_BRANCH: develop/main-develop
           BASE_BRANCH: main         
