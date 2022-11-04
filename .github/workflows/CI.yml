@@ -22,9 +22,7 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           branch: main
-      - name: Create Pull Request to master
-        uses: peter-evans/create-pull-request@v4
-        with:
-          branch: master
+          assignees: IsmaelCamacho-Hexaware
+          reviewers: IsmaelCamacho-Hexaware          
       - name: Curl request
         run: curl -X POST -d {} https://api.netlify.com/build_hooks/6365398559976d009f2aed7d
