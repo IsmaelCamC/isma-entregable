@@ -1,7 +1,6 @@
 name: Upload develop changes and pull request to main.
 on:
   pull_request:
-  push:
     branches:
       - develop/*
 jobs:
@@ -18,13 +17,19 @@ jobs:
         run: npm run lint
       - name: Test coverage
         run: npm run test
-      - name: Create Pull Request to main
-        uses: peter-evans/create-pull-request@v4
+  pull_request_to_main:
+    - name: Create Pull Request to main
+      uses: peter-evans/create-pull-request@v4
+      with:
+        branch: main
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          branch: main
-      - name: Create Pull Request to master
-        uses: peter-evans/create-pull-request@v4
-        with:
-          branch: master
-      - name: Curl request
-        run: curl -X POST -d {} https://api.netlify.com/build_hooks/6365398559976d009f2aed7d
+          node-version: "17"
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: CI=false npm run build
