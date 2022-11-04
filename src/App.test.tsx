@@ -6,5 +6,5 @@ test('renders learn react link', () => {
   const linkElement = screen.getByText(/Go to QA/i);
   expect(linkElement).toBeInTheDocument();
   const linkElement2 = screen.getByText(/Go to Production/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(linkElement2).toBeInTheDocument();
 });
