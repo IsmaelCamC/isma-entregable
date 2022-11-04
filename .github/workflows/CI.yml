@@ -19,10 +19,10 @@ jobs:
       - name: Test coverage
         run: npm run test
   pull_request_to_main:
-      - name: Create Pull Request to main
-        uses: peter-evans/create-pull-request@v4
-        with:
-          branch: main
+    - name: Create Pull Request to main
+      uses: peter-evans/create-pull-request@v4
+      with:
+        branch: main
   build:
     runs-on: ubuntu-latest
     steps:
@@ -34,4 +34,3 @@ jobs:
         run: npm install
       - name: Build
         run: CI=false npm run build
-  
