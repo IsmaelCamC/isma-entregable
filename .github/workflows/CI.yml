@@ -8,10 +8,6 @@ jobs:
   test-code:
     runs-on: ubuntu-latest
     steps:
-      - name: Create PR
-        run: gh pr create --title "Synchronizing branches." --body "Synchronization" --base main --head develop/main-develop
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
@@ -24,9 +20,5 @@ jobs:
         run: npm run test
       - name: Create PR
         run: gh pr create --title "Synchronizing branches." --body "Synchronization" --base main --head develop/main-develop
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Approve PR
-        run: gh pr merge -m
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
