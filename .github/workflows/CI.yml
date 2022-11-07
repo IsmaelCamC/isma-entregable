@@ -23,6 +23,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Approve PR
-        run: gh pr merge
+        run: gh pr merge -m
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
