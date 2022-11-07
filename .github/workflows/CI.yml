@@ -18,9 +18,11 @@ jobs:
         run: npm run lint
       - name: Test coverage
         run: npm run test
-       - name: Create Pull Request to main
-        uses: peter-evans/create-pull-request@v4
-        with:
-          branch: main
-          assignees: IsmaelCamacho-Hexaware
-          reviewers: IsmaelCamacho-Hexaware
+      - name: Create PR
+        run: gh pr create --title "Synchronizing branches." --body "Synchronization" --base main --head develop/main-develop
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Approve PR
+        run: gh pr review --approve --comment -b "Approved automatically."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
