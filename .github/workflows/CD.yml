@@ -1,6 +1,5 @@
 name: Deploy app to github pages
 on:
-  push:
   pull_request:
     branches: 
       - main
