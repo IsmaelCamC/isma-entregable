@@ -8,7 +8,9 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           <code>Juan Ismael Camacho Cervantes - CICD Course QA UPDATE</code>
-          <code> Hi Bladimir!</code>
+        </p>
+        <p>
+        <code> Hi Bladimir! Thanks for everything!</code>
         </p>
       </header>
     </div>
