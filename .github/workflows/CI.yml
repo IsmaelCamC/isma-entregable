@@ -22,3 +22,7 @@ jobs:
         run: gh pr create --title "Synchronizing branches." --body "Synchronization" --base main --head develop/main-develop
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       - name: Approve PR
+        run: gh pr merge -m
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
